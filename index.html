@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Haven Bookstore | Community</title>
+    <title>Book Haven Bookstore | Home</title>
 </head>
+
 <body>
 
     <header>
-        <img src="Client3_LogoPalette2_5C2E5C.png" alt="Book Haven Bookstore logo" width="120">
+        <img
+            src="Client3_LogoPalette2_5C2E5C.png"
+            alt="Book Haven Bookstore logo"
+            width="120"
+        >
+
         <h1>Book Haven Bookstore</h1>
 
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="gallery.html">Gallery</a>
             <a href="about.html">About Us</a>
@@ -20,51 +27,173 @@
     </header>
 
     <main>
+
         <section>
-            <h2>Community</h2>
+            <h2>Welcome to Book Haven</h2>
+
             <p>
-                Book Haven Bookstore is more than a store. It is a growing reading community
-                where readers can connect, share recommendations, and attend events.
+                Book Haven Bookstore is a welcoming neighborhood bookstore
+                created for readers of all ages and interests. We offer books,
+                magazines, reading accessories and a comfortable place for
+                members of the community to discover new stories.
+            </p>
+
+            <p>
+                Whether you are searching for your next favorite novel, a gift
+                for another reader or a place to connect with fellow book
+                lovers, Book Haven is here to help.
+            </p>
+
+            <p>
+                <a href="gallery.html">Browse Our Collection</a>
             </p>
         </section>
 
         <section>
-            <h2>Customer Testimonials</h2>
-            <p>"Book Haven always helps me find something new to read." – Sarah</p>
-            <p>"I love the atmosphere and the community book events." – Michael</p>
-            <p>"The staff recommendations are always excellent." – Amina</p>
+            <h2>Featured Books</h2>
+
+            <table>
+                <tr>
+                    <td>
+                        <figure>
+                            <img
+                                src="Client3_Book1.png"
+                                alt="Brie Mine 4Ever, a book for cheese lovers"
+                                width="180"
+                            >
+                            <figcaption>
+                                <strong>Brie Mine 4Ever</strong><br>
+                                A fun selection for food and cheese lovers.
+                            </figcaption>
+                        </figure>
+                    </td>
+
+                    <td>
+                        <figure>
+                            <img
+                                src="Client3_Book2.png"
+                                alt="Glory Riders, a book about bikers"
+                                width="180"
+                            >
+                            <figcaption>
+                                <strong>Glory Riders</strong><br>
+                                An exciting story for readers who enjoy
+                                adventure.
+                            </figcaption>
+                        </figure>
+                    </td>
+
+                    <td>
+                        <figure>
+                            <img
+                                src="Client3_Book3.png"
+                                alt="Sorcerer's Shadowed Chronicles, a fantasy book"
+                                width="180"
+                            >
+                            <figcaption>
+                                <strong>Sorcerer's Shadowed Chronicles</strong><br>
+                                A fantasy journey filled with mystery and magic.
+                            </figcaption>
+                        </figure>
+                    </td>
+                </tr>
+            </table>
+
+            <p>
+                <a href="gallery.html">View More Products</a>
+            </p>
         </section>
 
         <section>
-            <h2>Upcoming Events</h2>
+            <h2>More Than a Bookstore</h2>
+
+            <article>
+                <h3>Books for Every Reader</h3>
+                <p>
+                    Explore fiction, fantasy, adventure, lifestyle publications,
+                    magazines and other carefully selected titles.
+                </p>
+            </article>
+
+            <article>
+                <h3>Reading Accessories</h3>
+                <p>
+                    Find notebooks, tote bags, stickers and other products made
+                    for people who love books and reading.
+                </p>
+            </article>
+
+            <article>
+                <h3>Community Connections</h3>
+                <p>
+                    Join local events, discover store announcements and learn
+                    about opportunities to connect with other readers.
+                </p>
+
+                <p>
+                    <a href="community.html">Visit Our Community Page</a>
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Why Shop at Book Haven?</h2>
+
             <ul>
-                <li>Monthly Book Club Meeting – May 3</li>
-                <li>Children’s Story Hour – May 10</li>
-                <li>Author Spotlight Night – May 17</li>
+                <li>A varied collection for different interests and age groups</li>
+                <li>Friendly assistance when choosing your next book</li>
+                <li>Books, magazines and reading-related merchandise</li>
+                <li>Community events and activities for local readers</li>
             </ul>
         </section>
 
         <section>
-            <h2>Announcements</h2>
+            <h2>Visit Book Haven</h2>
+
             <p>
-                Join our reading club to receive updates on new arrivals, bookstore events,
-                and featured community picks each month.
+                Stop by the bookstore to browse our shelves, meet other readers
+                and find something new to enjoy.
+            </p>
+
+            <p>
+                <a href="about.html">View Store Information and Contact Us</a>
             </p>
         </section>
+
     </main>
 
     <footer>
         <h3>Subscribe to Our Newsletter</h3>
+
         <form>
-            <label for="subscribe-email-community">Email Address:</label><br>
-            <input type="email" id="subscribe-email-community" name="subscribe-email-community" required>
-            <button type="button" id="subscribe-btn-community">Subscribe</button>
+            <label for="subscribe-email-home">Email Address:</label><br>
+
+            <input
+                type="email"
+                id="subscribe-email-home"
+                name="subscribe-email-home"
+                required
+            >
+
+            <button type="button" id="subscribe-btn-home">
+                Subscribe
+            </button>
         </form>
 
         <p>Email: contact@bookhaven.com</p>
+
         <p>Follow us on social media</p>
+
+        <nav aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Us</a>
+            <a href="community.html">Community</a>
+        </nav>
+
         <p>&copy; 2026 Book Haven Bookstore</p>
     </footer>
 
 </body>
+
 </html>
