@@ -136,13 +136,15 @@
                 ></textarea>
 
                 <div>
-                    <button type="submit" id="contact-submit">
-                        Submit
-                    </button>
+                    <input
+                        type="submit"
+                        value="Submit"
+                    >
 
-                    <button type="reset">
-                        Clear
-                    </button>
+                    <input
+                        type="reset"
+                        value="Clear"
+                    >
                 </div>
 
             </form>
@@ -184,14 +186,27 @@
         const contactForm =
             document.getElementById("contact-form");
 
+        const subscribeButton =
+            document.getElementById("subscribe-btn-about");
+
         contactForm.addEventListener("submit", function (event) {
             event.preventDefault();
 
+            const customerInformation = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value,
+                customOrder:
+                    document.getElementById("feedback").value
+            };
+
+            localStorage.setItem(
+                "bookHavenCustomOrder",
+                JSON.stringify(customerInformation)
+            );
+
             alert("Thank you for your message.");
         });
-
-        const subscribeButton =
-            document.getElementById("subscribe-btn-about");
 
         subscribeButton.addEventListener("click", function () {
             alert("Thank you for subscribing.");
