@@ -3,7 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Book Haven Bookstore | About Us</title>
 
@@ -53,6 +57,40 @@
         </section>
 
         <section>
+            <h2>Business Hours</h2>
+
+            <table>
+                <caption>
+                    Book Haven Bookstore weekly opening hours
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col">Opening Hours</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Monday–Friday</th>
+                        <td>9:00 AM–8:00 PM</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Saturday</th>
+                        <td>10:00 AM–6:00 PM</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Sunday</th>
+                        <td>11:00 AM–5:00 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
             <h2>Meet the Team</h2>
 
             <figure>
@@ -95,32 +133,46 @@
         <section>
             <h2>Contact Us</h2>
 
+            <p>
+                Contact us with questions, feedback, book requests, or custom
+                order information.
+            </p>
+
             <form id="contact-form">
 
-                <label for="name">Name:</label>
+                <label for="name">
+                    Name:
+                </label>
 
                 <input
                     type="text"
                     id="name"
                     name="name"
+                    autocomplete="name"
                     required
                 >
 
-                <label for="email">Email:</label>
+                <label for="email">
+                    Email:
+                </label>
 
                 <input
                     type="email"
                     id="email"
                     name="email"
+                    autocomplete="email"
                     required
                 >
 
-                <label for="phone">Phone Number:</label>
+                <label for="phone">
+                    Phone Number:
+                </label>
 
                 <input
                     type="tel"
                     id="phone"
                     name="phone"
+                    autocomplete="tel"
                     required
                 >
 
@@ -155,7 +207,8 @@
     <footer>
         <h3>Subscribe to Our Newsletter</h3>
 
-        <form>
+        <form id="subscribe-form-about">
+
             <label for="subscribe-email-about">
                 Email Address:
             </label>
@@ -164,20 +217,45 @@
                 type="email"
                 id="subscribe-email-about"
                 name="subscribe-email-about"
+                autocomplete="email"
                 required
             >
 
             <button
-                type="button"
+                type="submit"
                 id="subscribe-btn-about"
             >
                 Subscribe
             </button>
+
         </form>
 
-        <p>Email: contact@bookhaven.com</p>
+        <p>
+            Email:
+            <a href="mailto:contact@bookhaven.com">
+                contact@bookhaven.com
+            </a>
+        </p>
 
         <p>Follow us on social media</p>
+
+        <nav aria-label="Social media links">
+            <a href="#" aria-label="Book Haven on Instagram">
+                Instagram
+            </a>
+
+            <a href="#" aria-label="Book Haven on Facebook">
+                Facebook
+            </a>
+
+            <a href="#" aria-label="Book Haven on X">
+                X
+            </a>
+
+            <a href="#" aria-label="Book Haven on YouTube">
+                YouTube
+            </a>
+        </nav>
 
         <p>&copy; 2026 Book Haven Bookstore</p>
     </footer>
@@ -186,16 +264,19 @@
         const contactForm =
             document.getElementById("contact-form");
 
-        const subscribeButton =
-            document.getElementById("subscribe-btn-about");
+        const subscribeForm =
+            document.getElementById("subscribe-form-about");
 
         contactForm.addEventListener("submit", function (event) {
             event.preventDefault();
 
             const customerInformation = {
-                name: document.getElementById("name").value,
-                email: document.getElementById("email").value,
-                phone: document.getElementById("phone").value,
+                name:
+                    document.getElementById("name").value,
+                email:
+                    document.getElementById("email").value,
+                phone:
+                    document.getElementById("phone").value,
                 customOrder:
                     document.getElementById("feedback").value
             };
@@ -208,7 +289,9 @@
             alert("Thank you for your message.");
         });
 
-        subscribeButton.addEventListener("click", function () {
+        subscribeForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
             alert("Thank you for subscribing.");
         });
     </script>
