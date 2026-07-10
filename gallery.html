@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="styles.css">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Book Haven Bookstore | Gallery</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
-<script src="script.js"></script>
+
 <body class="gallery-page">
+
     <header>
-        <img src="Client3_LogoPalette1_2E4057.png" alt="Book Haven Bookstore logo" width="120">
+        <img
+            src="Client3_LogoPalette1_2E4057.png"
+            alt="Book Haven Bookstore logo"
+            width="120"
+        >
+
         <h1>Book Haven Bookstore</h1>
 
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="gallery.html">Gallery</a>
             <a href="about.html">About Us</a>
@@ -21,83 +30,267 @@
     </header>
 
     <main>
+
         <section>
             <h2>Gallery</h2>
-            <p>Browse some of our featured book selections below.</p>
+
+            <p>
+                Browse some of our featured book selections below.
+            </p>
         </section>
 
         <section>
             <table>
-                <tr>
-                    <td>
-                        <img src="Client3_Book1.png" alt="Brie Mine 4Ever, a book for cheese lovers" width="150"><br>
-                        <p>Brie Mine 4Ever, a book for cheese lovers</p>
-                       <button type="button" class="subscribe-button">
-    Subscribe
-</button>
-                    </td>
-                    <td>
-                        <img src="Client3_Book2.png" alt="Glory Riders, a book about bikers" width="150"><br>
-                        <p>Glory Riders, a book about bikers</p>
-                        <button type="button" class="add-to-cart" data-item="Glory Riders, a book about bikers">Add to Cart</button>
-                    </td>
-                    <td>
-                        <img src="Client3_Book3.png" alt="Sorcerer's Shadowed Chronicles, a fantasy book" width="150"><br>
-                        <p>Sorcerer's Shadowed Chronicles, a fantasy book</p>
-                        <button type="button" class="add-to-cart" data-item="Sorcerer's Shadowed Chronicles, a fantasy book">Add to Cart</button>
-                    </td>
-                    <td>
-                        <img src="Client3_Notebook.png" alt="A notebook with text on the cover that says Book Haven Bookstore" width="150"><br>
-                        <p>A notebook with text on the cover that says Book Haven Bookstore</p>
-                        <button type="button" class="add-to-cart" data-item="A notebook with text on the cover that says Book Haven Bookstore">Add to Cart</button>
-                    </td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img
+                                src="Client3_Book1.png"
+                                alt="Brie Mine 4Ever, a book for cheese lovers"
+                                width="150"
+                            >
 
-                <tr>
-                    <td>
-                        <img src="Client3_Stickers.png" alt="A set of four Book Haven Bookstore stickers that promote reading" width="150"><br>
-                        <p>A set of four Book Haven Bookstore stickers that promote reading</p>
-                        <button type="button" class="add-to-cart" data-item="A set of four Book Haven Bookstore stickers that promote reading">Add to Cart</button>
-                    </td>
-                    <td>
-                        <img src="Client3_ToteBag.png" alt="A canvas tote bag with black lettering that says ALL I DO IS READ READ READ" width="150"><br>
-                        <p>A canvas tote bag with black lettering that says ALL I DO IS READ READ READ</p>
-                        <button type="button" class="add-to-cart" data-item="A canvas tote bag with black lettering that says ALL I DO IS READ READ READ">Add to Cart</button>
-                    </td>
-                    <td>
-                        <img src="Client3_Magazine1.png" alt="Ball, a magazine about pickleball" width="150"><br>
-                        <p>Ball, a magazine about pickleball</p>
-                        <button type="button" class="add-to-cart" data-item="Ball, a magazine about pickleball">Add to Cart</button>
-                    </td>
-                    <td>
-                        <img src="Client3_Magazine2.png" alt="Travel, a magazine for travelers" width="150"><br>
-                        <p>Travel, a magazine for travelers</p>
-                        <button type="button" class="add-to-cart" data-item="Travel, a magazine for travelers">Add to Cart</button>
-                    </td>
-                </tr>
+                            <p>
+                                Brie Mine 4Ever, a book for cheese lovers
+                            </p>
+
+                            <button
+                                type="button"
+                                class="add-to-cart"
+                                data-item="Brie Mine 4Ever"
+                            >
+                                Add to Cart
+                            </button>
+                        </td>
+
+                        <td>
+                            <img
+                                src="Client3_Book2.png"
+                                alt="Glory Riders, a book about bikers"
+                                width="150"
+                            >
+
+                            <p>
+                                Glory Riders, a book about bikers
+                            </p>
+
+                            <button
+                                type="button"
+                                class="add-to-cart"
+                                data-item="Glory Riders"
+                            >
+                                Add to Cart
+                            </button>
+                        </td>
+
+                        <td>
+                            <img
+                                src="Client3_Book3.png"
+                                alt="Sorcerer's Shadowed Chronicles, a fantasy book"
+                                width="150"
+                            >
+
+                            <p>
+                                Sorcerer's Shadowed Chronicles, a fantasy book
+                            </p>
+
+                            <button
+                                type="button"
+                                class="add-to-cart"
+                                data-item="Sorcerer's Shadowed Chronicles"
+                            >
+                                Add to Cart
+                            </button>
+                        </td>
+
+                        <td>
+                            <img
+                                src="Client3_Notebook.png"
+                                alt="A notebook with text on the cover that says Book Haven Bookstore"
+                                width="150"
+                            >
+
+                            <p>
+                                A notebook with text on the cover that says
+                                Book Haven Bookstore
+                            </p>
+
+                            <button
+                                type="button"
+                                class="add-to-cart"
+                                data-item="Book Haven Notebook"
+                            >
+                                Add to Cart
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img
+                                src="Client3_Stickers.png"
+                                alt="A set of four Book Haven Bookstore stickers that promote reading"
+                                width="150"
+                            >
+
+                            <p>
+                                A set of four Book Haven Bookstore stickers
+                                that promote reading
+                            </p>
+
+                            <button
+                                type="button"
+                                class="add-to-cart"
+                                data-item="Book Haven Stickers"
+                            >
+                                Add to Cart
+                            </button>
+                        </td>
+
+                        <td>
+                            <img
+                                src="Client3_ToteBag.png"
+                                alt="A canvas tote bag with black lettering that says All I Do Is Read"
+                                width="150"
+                            >
+
+                            <p>
+                                A canvas tote bag with black lettering that
+                                says ALL I DO IS READ READ READ
+                            </p>
+
+                            <button
+                                type="button"
+                                class="add-to-cart"
+                                data-item="Book Haven Tote Bag"
+                            >
+                                Add to Cart
+                            </button>
+                        </td>
+
+                        <td>
+                            <img
+                                src="Client3_Magazine1.png"
+                                alt="Ball, a magazine about pickleball"
+                                width="150"
+                            >
+
+                            <p>
+                                Ball, a magazine about pickleball
+                            </p>
+
+                            <button
+                                type="button"
+                                class="add-to-cart"
+                                data-item="Ball Magazine"
+                            >
+                                Add to Cart
+                            </button>
+                        </td>
+
+                        <td>
+                            <img
+                                src="Client3_Magazine2.png"
+                                alt="Travel, a magazine for travelers"
+                                width="150"
+                            >
+
+                            <p>
+                                Travel, a magazine for travelers
+                            </p>
+
+                            <button
+                                type="button"
+                                class="add-to-cart"
+                                data-item="Travel Magazine"
+                            >
+                                Add to Cart
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
         </section>
 
         <section>
             <h2>Shopping Cart</h2>
-            <button type="button" id="view-cart-btn">View Cart</button>
-            <button type="button" id="clear-cart-btn">Clear Cart</button>
-            <button type="button" id="process-order-btn">Process Order</button>
+
+            <button type="button" id="view-cart-btn">
+                View Cart
+            </button>
+
+            <button type="button" id="clear-cart-btn">
+                Clear Cart
+            </button>
+
+            <button type="button" id="process-order-btn">
+                Process Order
+            </button>
         </section>
+
     </main>
 
     <footer>
         <h3>Subscribe to Our Newsletter</h3>
+
         <form>
-            <label for="subscribe-email-gallery">Email Address:</label><br>
-            <input type="email" id="subscribe-email-gallery" name="subscribe-email-gallery" required>
-            <button type="button" id="subscribe-btn-gallery">Subscribe</button>
+            <label for="subscribe-email-gallery">
+                Email Address:
+            </label>
+
+            <input
+                type="email"
+                id="subscribe-email-gallery"
+                name="subscribe-email-gallery"
+                required
+            >
+
+            <button
+                type="button"
+                id="subscribe-btn-gallery"
+            >
+                Subscribe
+            </button>
         </form>
 
         <p>Email: contact@bookhaven.com</p>
+
         <p>Follow us on social media</p>
+
         <p>&copy; 2026 Book Haven Bookstore</p>
     </footer>
+
+    <script>
+        const addToCartButtons =
+            document.querySelectorAll(".add-to-cart");
+
+        addToCartButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                alert("Item added to the cart.");
+            });
+        });
+
+        const clearCartButton =
+            document.getElementById("clear-cart-btn");
+
+        clearCartButton.addEventListener("click", function () {
+            alert("Cart cleared.");
+        });
+
+        const processOrderButton =
+            document.getElementById("process-order-btn");
+
+        processOrderButton.addEventListener("click", function () {
+            alert("Thank you for your order.");
+        });
+
+        const subscribeButton =
+            document.getElementById("subscribe-btn-gallery");
+
+        subscribeButton.addEventListener("click", function () {
+            alert("Thank you for subscribing.");
+        });
+    </script>
 
 </body>
 </html>
