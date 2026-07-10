@@ -481,3 +481,18 @@ footer nav a:focus-visible {
     transition: none !important;
   }
 }
+
+    /* Align all Gallery Add to Cart buttons */
+.gallery-page td {
+    position: relative;
+    padding-bottom: 6.5rem;
+}
+
+.gallery-page td .add-to-cart {
+    position: absolute;
+    left: 1.2rem;
+    right: 1.2rem;
+    bottom: 1.2rem;
+    width: auto;
+}
+</head>
