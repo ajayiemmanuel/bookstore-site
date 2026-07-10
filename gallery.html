@@ -106,13 +106,12 @@
                         <td>
                             <img
                                 src="Client3_Notebook.png"
-                                alt="A notebook with text on the cover that says Book Haven Bookstore"
+                                alt="Book Haven Bookstore notebook"
                                 width="150"
                             >
 
                             <p>
-                                A notebook with text on the cover that says
-                                Book Haven Bookstore
+                                A Book Haven Bookstore notebook
                             </p>
 
                             <button
@@ -129,13 +128,12 @@
                         <td>
                             <img
                                 src="Client3_Stickers.png"
-                                alt="A set of four Book Haven Bookstore stickers that promote reading"
+                                alt="Book Haven Bookstore reading stickers"
                                 width="150"
                             >
 
                             <p>
-                                A set of four Book Haven Bookstore stickers
-                                that promote reading
+                                A set of Book Haven Bookstore reading stickers
                             </p>
 
                             <button
@@ -150,13 +148,12 @@
                         <td>
                             <img
                                 src="Client3_ToteBag.png"
-                                alt="A canvas tote bag with black lettering that says All I Do Is Read"
+                                alt="Book Haven canvas reading tote bag"
                                 width="150"
                             >
 
                             <p>
-                                A canvas tote bag with black lettering that
-                                says ALL I DO IS READ READ READ
+                                A canvas tote bag for readers
                             </p>
 
                             <button
@@ -218,17 +215,45 @@
             <button type="button" id="view-cart-btn">
                 View Cart
             </button>
-
-            <button type="button" id="clear-cart-btn">
-                Clear Cart
-            </button>
-
-            <button type="button" id="process-order-btn">
-                Process Order
-            </button>
         </section>
 
     </main>
+
+    <div
+        id="cart-modal"
+        class="cart-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cart-modal-title"
+        hidden
+    >
+        <div class="cart-modal-content">
+
+            <button
+                type="button"
+                id="close-cart-btn"
+                class="cart-close"
+                aria-label="Close shopping cart"
+            >
+                ×
+            </button>
+
+            <h2 id="cart-modal-title">Your Shopping Cart</h2>
+
+            <div id="cart-display"></div>
+
+            <div class="cart-modal-actions">
+                <button type="button" id="clear-cart-btn">
+                    Clear Cart
+                </button>
+
+                <button type="button" id="process-order-btn">
+                    Process Order
+                </button>
+            </div>
+
+        </div>
+    </div>
 
     <footer>
         <h3>Subscribe to Our Newsletter</h3>
@@ -245,50 +270,139 @@
                 required
             >
 
-            <button
-                type="button"
-                id="subscribe-btn-gallery"
-            >
+            <button type="button" id="subscribe-btn-gallery">
                 Subscribe
             </button>
         </form>
 
         <p>Email: contact@bookhaven.com</p>
-
         <p>Follow us on social media</p>
-
         <p>&copy; 2026 Book Haven Bookstore</p>
     </footer>
 
     <script>
+        const cartStorageKey = "bookHavenCart";
+
         const addToCartButtons =
             document.querySelectorAll(".add-to-cart");
 
-        addToCartButtons.forEach(function (button) {
-            button.addEventListener("click", function () {
-                alert("Item added to the cart.");
-            });
-        });
+        const viewCartButton =
+            document.getElementById("view-cart-btn");
 
         const clearCartButton =
             document.getElementById("clear-cart-btn");
 
-        clearCartButton.addEventListener("click", function () {
-            alert("Cart cleared.");
-        });
-
         const processOrderButton =
             document.getElementById("process-order-btn");
 
-        processOrderButton.addEventListener("click", function () {
-            alert("Thank you for your order.");
-        });
+        const closeCartButton =
+            document.getElementById("close-cart-btn");
+
+        const cartModal =
+            document.getElementById("cart-modal");
+
+        const cartDisplay =
+            document.getElementById("cart-display");
 
         const subscribeButton =
             document.getElementById("subscribe-btn-gallery");
 
+        function getCart() {
+            const storedCart =
+                sessionStorage.getItem(cartStorageKey);
+
+            if (storedCart === null) {
+                return [];
+            }
+
+            return JSON.parse(storedCart);
+        }
+
+        function saveCart(cart) {
+            sessionStorage.setItem(
+                cartStorageKey,
+                JSON.stringify(cart)
+            );
+        }
+
+        function displayCart() {
+            const cart = getCart();
+
+            cartDisplay.innerHTML = "";
+
+            if (cart.length === 0) {
+                const emptyMessage =
+                    document.createElement("p");
+
+                emptyMessage.textContent =
+                    "Your shopping cart is empty.";
+
+                cartDisplay.appendChild(emptyMessage);
+                return;
+            }
+
+            const cartList =
+                document.createElement("ul");
+
+            cartList.id = "cart-items";
+
+            cart.forEach(function (item) {
+                const listItem =
+                    document.createElement("li");
+
+                listItem.textContent = item;
+
+                cartList.appendChild(listItem);
+            });
+
+            cartDisplay.appendChild(cartList);
+        }
+
+        addToCartButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                const cart = getCart();
+                const itemName = button.dataset.item;
+
+                cart.push(itemName);
+                saveCart(cart);
+
+                alert("Item added to the cart.");
+            });
+        });
+
+        viewCartButton.addEventListener("click", function () {
+            displayCart();
+            cartModal.hidden = false;
+        });
+
+        closeCartButton.addEventListener("click", function () {
+            cartModal.hidden = true;
+        });
+
+        clearCartButton.addEventListener("click", function () {
+            sessionStorage.removeItem(cartStorageKey);
+
+            displayCart();
+
+            alert("Cart cleared.");
+        });
+
+        processOrderButton.addEventListener("click", function () {
+            sessionStorage.removeItem(cartStorageKey);
+
+            displayCart();
+
+            alert("Thank you for your order.");
+        });
+
         subscribeButton.addEventListener("click", function () {
             alert("Thank you for subscribing.");
+        });
+
+        cartModal.addEventListener("click", function (event) {
+            if (event.target === cartModal) {
+                cartModal.hidden = true;
+            }
         });
     </script>
 
