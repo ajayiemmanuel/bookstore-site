@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="styles.css">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Book Haven Bookstore | About Us</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
-<script src="script.js"></script>
+
 <body class="about-page">
 
     <header>
-        <img src="Client3_LogoPalette1_2E4057.png" alt="Book Haven Bookstore logo" width="120">
+        <img
+            src="Client3_LogoPalette1_2E4057.png"
+            alt="Book Haven Bookstore logo"
+            width="120"
+        >
+
         <h1>Book Haven Bookstore</h1>
 
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="gallery.html">Gallery</a>
             <a href="about.html">About Us</a>
@@ -22,76 +30,174 @@
     </header>
 
     <main>
+
         <section>
             <h2>About Us</h2>
+
             <p>
-                Book Haven Bookstore was created to provide readers with a welcoming place
-                to explore books, discover new authors, and stay connected to a reading
-                community. We believe books should inspire learning, imagination, and conversation.
+                Book Haven Bookstore was created to provide readers with a
+                welcoming place to explore books, discover new authors, and
+                stay connected to a reading community. We believe books should
+                inspire learning, imagination, and conversation.
             </p>
         </section>
 
         <section>
             <h2>Our Mission</h2>
+
             <p>
-                Our mission is to make reading more accessible, enjoyable, and community-driven
-                by offering carefully selected books and reader-focused experiences.
+                Our mission is to make reading more accessible, enjoyable,
+                and community-driven by offering carefully selected books
+                and reader-focused experiences.
             </p>
         </section>
 
         <section>
             <h2>Meet the Team</h2>
+
             <figure>
-                <img src="pexels-roberto-hund-5356174.jpg" alt="Store manager portrait" width="150">
-                <figcaption>Amara – Store Manager</figcaption>
+                <img
+                    src="pexels-roberto-hund-5356174.jpg"
+                    alt="Portrait of Amara, the store manager"
+                    width="150"
+                >
+
+                <figcaption>
+                    Amara – Store Manager
+                </figcaption>
             </figure>
 
             <figure>
-                <img src="pexels-olly-3799223.jpg" alt="Community coordinator portrait" width="150">
-                <figcaption>Daniel – Community Coordinator</figcaption>
+                <img
+                    src="pexels-olly-3799223.jpg"
+                    alt="Portrait of Daniel, the community coordinator"
+                    width="150"
+                >
+
+                <figcaption>
+                    Daniel – Community Coordinator
+                </figcaption>
             </figure>
 
             <figure>
-                <img src="pexels-ivan-aguilar-2154351719-33801241.jpg" alt="Customer support lead portrait" width="150">
-                <figcaption>Leah – Customer Support Lead</figcaption>
+                <img
+                    src="pexels-ivan-aguilar-2154351719-33801241.jpg"
+                    alt="Portrait of Leah, the customer support lead"
+                    width="150"
+                >
+
+                <figcaption>
+                    Leah – Customer Support Lead
+                </figcaption>
             </figure>
         </section>
 
         <section>
             <h2>Contact Us</h2>
-            <form>
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
 
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+            <form id="contact-form">
 
-                <label for="phone">Phone Number:</label><br>
-                <input type="tel" id="phone" name="phone" required><br><br>
+                <label for="name">Name:</label>
 
-                <label for="feedback">Message or Custom Request:</label><br>
-                <textarea id="feedback" name="feedback" rows="5" cols="40" required></textarea><br><br>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                >
 
-                <input type="submit" value="Submit">
-                <input type="reset" value="Clear">
+                <label for="email">Email:</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                >
+
+                <label for="phone">Phone Number:</label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                >
+
+                <label for="feedback">
+                    Message or Custom Request:
+                </label>
+
+                <textarea
+                    id="feedback"
+                    name="feedback"
+                    rows="5"
+                    required
+                ></textarea>
+
+                <div>
+                    <button type="submit" id="contact-submit">
+                        Submit
+                    </button>
+
+                    <button type="reset">
+                        Clear
+                    </button>
+                </div>
+
             </form>
         </section>
+
     </main>
 
     <footer>
         <h3>Subscribe to Our Newsletter</h3>
+
         <form>
-            <label for="subscribe-email-about">Email Address:</label><br>
-            <input type="email" id="subscribe-email-about" name="subscribe-email-about" required>
-            <button type="button" class="subscribe-button">
-    Subscribe
-</button>
+            <label for="subscribe-email-about">
+                Email Address:
+            </label>
+
+            <input
+                type="email"
+                id="subscribe-email-about"
+                name="subscribe-email-about"
+                required
+            >
+
+            <button
+                type="button"
+                id="subscribe-btn-about"
+            >
+                Subscribe
+            </button>
         </form>
 
         <p>Email: contact@bookhaven.com</p>
+
         <p>Follow us on social media</p>
+
         <p>&copy; 2026 Book Haven Bookstore</p>
     </footer>
 
+    <script>
+        const contactForm =
+            document.getElementById("contact-form");
+
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            alert("Thank you for your message.");
+        });
+
+        const subscribeButton =
+            document.getElementById("subscribe-btn-about");
+
+        subscribeButton.addEventListener("click", function () {
+            alert("Thank you for subscribing.");
+        });
+    </script>
+
 </body>
+
 </html>
